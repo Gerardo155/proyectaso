@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Registro Alumno</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -46,12 +46,25 @@
                         <h2 class="display-8 text-center my-4"> REGISTRO DE ALUMNOS </h2>
                      
             
-            <div class="form-group">
+       <div class="form-group">
+          <div class="row">            
+              <div class="col">                                         
                 <label for="exampleInputName">Codigo</label>
                 <input class="form-control" type="text" placeholder="Ingrese codigo" name="codigo" id="codigo" >
-                <input type="hidden" name="control" value="GUARDAR">
-            </div>
-           
+                <input type="hidden" name="control" value="GUARDAR">               
+             </div>
+             
+                 
+                <div class="col" align="center">                   
+                   <label for="exampleInputName">Fecha de inscripción</label>
+                    <br> 
+                   <input type="date" id="fecha" name="fecha"
+                    value="2022-10-27"
+                    min="2022-01-01" max="2025-12-31">                  
+                </div>    
+                 
+           </div>
+        </div>
                         
             <div class="form-group">
                 <label for="exampleInputName">Nombre del alumno</label>
@@ -69,17 +82,56 @@
               <small id="emailHelp" class="form-text text-muted">Ingrese su correo electrónico.</small>
             </div>
            
-                        
-            <div class="form-group">
-              <label for="exampleInputName">Dirección</label>
-              <input type="text" class="form-control"  placeholder="Ingrese dirección" name="direccion" id="direccion"  >
-            </div>
-            
+                                 
             <div class="form-group">
                 <label for="exampleInputName">Telefono</label>
                 <input class="form-control" type="text" placeholder="Ingrese telefono" name="telefono" id="telefono" >
             </div>
-            
+           
+                 <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                                     
+                            <label for="exampleInputName">Dirección</label>
+                             <input type="text" class="form-control"  placeholder="Ingrese dirección" name="direccion" id="direccion"  >
+                                
+                                </div>
+                                <div class="col">
+                                    <label for="departamento">Sucursal:</label>  
+                                    <select class="form-control" name="Sucursal">
+                                        <option value="1">Puerto Barrios</option>
+                                        <option value="2">Morales</option>
+                                        <option value="3">Los Amates</option>
+                                        <option value="4">El Estor</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>       
+                        
+                        
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="grado">Grado:</label>
+                                    <select class="form-control" name="Grado">
+                                        <option value="1">Novatos</option>
+                                        <option value="2">Expertos</option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <label for="nivel">Nivel:</label>  
+                                    <select class="form-control" name="Nivel">
+                                        <option value="1">Principiante I</option>
+                                        <option value="2">Principiante II</option>
+                                        <option value="3">Avanzado I</option>
+                                        <option value="4">Avanzado II</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div> 
+                        
+                                       
+                        
                         
             <br>
             
