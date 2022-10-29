@@ -49,7 +49,7 @@
             </a>
         <div class="dropdown-menu">
                 <a class="dropdown-item" href="Developers.html">Developers</a>
-                <a class="dropdown-item" href="Progress.html">Progress</a>
+                
             </div>
         </li>
      <li class="nav-item dropdown">
@@ -58,10 +58,10 @@
             </a>
         <div class="dropdown-menu">
                 <a class="dropdown-item" href="VerAlumno.jsp">Alumnos</a>
-                <a class="dropdown-item" href="Catedraticos.html">Catedráticos</a>
+                <a class="dropdown-item" href="VerCatedratico.jsp">Catedráticos</a>
             </div>
         </li>
-    
+      
        
         
       <li class="nav-item dropdown">

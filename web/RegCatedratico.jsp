@@ -150,12 +150,16 @@
                 <table class="table table-striped table-hover">
                     <thead class="table-dark">
                         <tr>
-                            <td>Codigo de Catedratico</td>
+                            <td>Codigo</td>
                             <td>Nombre</td>
                             <td>Apellido</td>
                             <td>Dirección</td>
-                            <td>Correo Institucional</td>
+                            <td>Correo</td>
                             <td>Telefono</td>
+                            <td>Sucursal</td>
+                            <td>Grado</td>
+                            <td>Nivel</td>
+                            <td>Fecha</td>
                             <td>Acción</td>
                         </tr>
                     </thead>

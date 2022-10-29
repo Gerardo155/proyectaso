@@ -41,8 +41,8 @@ public class AlumnoController {
    
     
     public String guardarAlumno2(Alumno alumno){        
-        String sql = "INSERT INTO rapidito.alumno(numero_carne, nombre_alumno, apellido_alumno, correo_alumno, direccion_alumno, telefono_alumno) ";
-             sql += " VALUES(?,?,?,?,?,?)";              
+        String sql = "INSERT INTO rapidito.alumno(numero_carne, nombre_alumno, apellido_alumno, correo_alumno, direccion_alumno, telefono_alumno, sucursal_alumno, grado_alumno, nivel_alumno, fecha_alumno) ";
+             sql += " VALUES(?,?,?,?,?,?,?,?,?,?)";              
        try{     
             abrirConexion();
             statement = conexion.prepareStatement(sql); 
@@ -52,6 +52,11 @@ public class AlumnoController {
             statement.setString(4, alumno.getCorreo());
             statement.setString(5, alumno.getDireccion());
             statement.setInt(6, alumno.getTelefono());
+            statement.setString(7, alumno.getSucursal());
+            statement.setString(8, alumno.getGrado());
+            statement.setString(9, alumno.getNivel());
+            statement.setString(10, alumno.getFecha());
+            
                 int resultado = statement.executeUpdate(); 
                 if(resultado > 0){
                     return String.valueOf(resultado);
@@ -72,13 +77,17 @@ public class AlumnoController {
         result = statement.executeQuery();            
             if (result!=null){
                 while (result.next()){
-                respuesta.append("<tr>");
+                respuesta.append("<tr bd-dark>");
                 respuesta.append("<td >").append(result.getString("numero_carne")).append("</td>");
                 respuesta.append("<td >").append(result.getString("nombre_alumno")).append("</td>");
                 respuesta.append("<td >").append(result.getString("apellido_alumno")).append("</td>");
                 respuesta.append("<td >").append(result.getString("direccion_alumno")).append("</td>");
                 respuesta.append("<td >").append(result.getString("correo_alumno")).append("</td>");
                 respuesta.append("<td >").append(result.getString("telefono_alumno")).append("</td>");
+                respuesta.append("<td >").append(result.getString("sucursal_alumno")).append("</td>");
+                respuesta.append("<td >").append(result.getString("grado_alumno")).append("</td>");
+                respuesta.append("<td >").append(result.getString("nivel_alumno")).append("</td>");
+                respuesta.append("<td >").append(result.getString("fecha_alumno")).append("</td>");
                 respuesta.append("<td id=\"").append(result.getString("numero_carne"))
                         .append("\"  onclick=\"eliminarAlumno(this.id);\">") 
                          //.append("\"  onclick=\"eliminarAlumno("+result.getString("numero_carne")+");\">") 

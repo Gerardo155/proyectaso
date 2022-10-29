@@ -11,10 +11,7 @@ import java.sql.SQLException;
  * and open the template in the editor.
  */
 
-/**
- *
- * @author JP
- */
+
 public class Usuario {
     private ConexionBaseDeDatos conectorBD;
     private Connection conexion;

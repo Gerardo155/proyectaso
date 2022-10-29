@@ -1,23 +1,23 @@
 <%-- 
-    Document   : VerAlumno
-    Created on : 25/10/2022, 22:52:34
+    Document   : VerCatedratico
+    Created on : 29/10/2022, 05:25:08
     Author     : GERARD
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
-
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Alumnos Registrados</title>
-        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+        
+          <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-        <!--script src="web/img/logo.png"></script-->
-        <style>
+        
+         <style>
             *{
                 margin: 0;
                 padding: 0;
@@ -33,12 +33,11 @@
             }
         </style>
         
-        .
     </head>
     <body>
-        <a href="NewServlet1">holis</a><br>
+       
         
-        <button type="button" onclick="NewServlet1" class="btn btn-success">VerAlumno</button>
+       
         
         <div class="p-3 bd-highlight">
              <a class="btn btn-warning" href="home.jsp" style="float: right;">Back</a>
@@ -46,7 +45,7 @@
                 <table class="table table-striped table-hover">
                     <thead class="table-dark">
                         <tr>
-                            <td>Codigo de Estudiante</td>
+                            <td>Codigo </td>
                             <td>Nombre</td>
                             <td>Apellido</td>
                             <td>Dirección</td>
@@ -65,10 +64,4 @@
         
       
     </body>
-    
-     
-    
 </html>
-
-
- 

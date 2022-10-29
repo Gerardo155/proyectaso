@@ -10,15 +10,24 @@ public class Alumno {
     private String apellido;
     private String correo;
     private String direccion;
+    private String sucursal;
+    private String grado;
+    private String nivel;
+    private String fecha;
     private int telefono;
 
     
-    public Alumno(int codigo, String nombre, String apellido, String correo, String direccion, int telefono){
+    public Alumno(int codigo, String nombre, String apellido, String correo, String direccion, String sucursal, String grado, String nivel, String fecha, int telefono){
         this.codigo=codigo;
         this.nombre=nombre;
         this.apellido=apellido;
         this.correo=correo;
-        this.direccion=direccion;     
+        this.direccion=direccion;   
+        this.sucursal=sucursal;   
+        this.grado=grado;   
+        this.nivel=nivel;   
+        this.fecha=fecha;   
+        
         this.telefono=telefono;   
     }
 
@@ -67,6 +76,42 @@ public class Alumno {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
+
+    public String getSucursal() {
+        return sucursal;
+    }
+
+    public void setSucursal(String sucursal) {
+        this.sucursal = sucursal;
+    }
+
+    public String getGrado() {
+        return grado;
+    }
+
+    public void setGrado(String grado) {
+        this.grado = grado;
+    }
+
+    public String getNivel() {
+        return nivel;
+    }
+
+    public void setNivel(String nivel) {
+        this.nivel = nivel;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+    
+    
+    
+    
         public int getTelefono() {
         return telefono;
     }

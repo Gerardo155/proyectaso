@@ -8,6 +8,7 @@ function enviarFormularioOpcion2(){
 	    alert('Oops! Something went wrong.');
 	  });
 
+
 	  // Set up our request
 	  XHR.open('POST', 'NewServlet1', true);
           XHR.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -140,3 +141,7 @@ function eliminarCatedratico(codigo){
     XHR.send(formData); 
     
 }
+
+
+
+

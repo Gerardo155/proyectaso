@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
+
 @WebServlet(urlPatterns = {"/NewServlet1"})
 public class NewServlet1 extends HttpServlet {
     Alumno alumno;
@@ -56,6 +57,10 @@ public class NewServlet1 extends HttpServlet {
                 request.getParameter("apellido"),        
                 request.getParameter("correo"),
                 request.getParameter("direccion"),
+                request.getParameter("sucursal"),
+                request.getParameter("grado"),
+                request.getParameter("nivel"),
+                request.getParameter("fecha"),
                 Integer.parseInt(request.getParameter("telefono")));                
                 registroAlumno.guardarAlumno2(alumno);//almacenarlo en BD                 
            }else if(control.toUpperCase().equals("ELIMINAR")){
@@ -64,12 +69,16 @@ public class NewServlet1 extends HttpServlet {
            }
                         
             
-           // registroAlumno.guardarAlumno(alumno);//almacenarlo en el array
+            //registroAlumno.guardarAlumno(alumno);//almacenarlo en el array
             //alumnosRegistrados= registroAlumno.getAlumnos();// consultar alumnos en el array                       
                     
            registroAlumno.getAlumnos2(objetoRespuesta);//consultar alumnos en la BD
            respuesta.write(objetoRespuesta.toString());             
             
+          
+           
+           
+           
            
             
         }

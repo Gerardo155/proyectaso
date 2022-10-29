@@ -46,63 +46,61 @@
                         <h2 class="display-8 text-center my-4"> REGISTRO DE ALUMNOS </h2>
                      
             
-       <div class="form-group">
-          <div class="row">            
-              <div class="col">                                         
-                <label for="exampleInputName">Codigo</label>
-                <input class="form-control" type="text" placeholder="Ingrese codigo" name="codigo" id="codigo" >
-                <input type="hidden" name="control" value="GUARDAR">               
-             </div>
-             
-                 
-                <div class="col" align="center">                   
-                   <label for="exampleInputName">Fecha de inscripción</label>
-                    <br> 
-                   <input type="date" id="fecha" name="fecha"
-                    value="2022-10-27"
-                    min="2022-01-01" max="2025-12-31">                  
-                </div>    
-                 
-           </div>
+        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="codigo">Código</label>
+                                    <input class="form-control" type="text" placeholder="Ingrese su código" name="codigo" id="codigo">
+                                    <input type="hidden" name="control" value="GUARDAR"> 
+                                </div>
+                                <div class="col">
+                                    <label for="fecha">Fecha de Registro</label>  
+                                    <input class="form-control" type="date" name="fecha" id="fecha">
+                                </div>
+                            </div>
         </div>
                         
-            <div class="form-group">
-                <label for="exampleInputName">Nombre del alumno</label>
-                <input class="form-control" type="text" placeholder="Ingrese nombre" name="nombre" id="nombre" >
-            </div>
-            
-            <div class="form-group">
-                <label for="exampleInputName">Apellido del alumno</label>
-                <input class="form-control" type="text" placeholder="Ingrese apellido" name="apellido" id="apellido" >
-            </div>
-            
-            <div class="form-group">
-              <label for="exampleInputEmail1">Correo </label>
-              <input type="email" class="form-control"  aria-describedby="emailHelp" name="correo" id="correo"  >
-              <small id="emailHelp" class="form-text text-muted">Ingrese su correo electrónico.</small>
-            </div>
-           
-                                 
-            <div class="form-group">
-                <label for="exampleInputName">Telefono</label>
-                <input class="form-control" type="text" placeholder="Ingrese telefono" name="telefono" id="telefono" >
-            </div>
+        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="nombre">Nombre</label>
+                                    <input class="form-control" type="text" placeholder="Ingrese nombre" name="nombre" id="nombre">
+                                </div>
+                                 <div class="col">
+                                    <label for="apellido">Apellido</label>
+                                    <input class="form-control" type="text" placeholder="Ingrese apellido" name="apellido" id="apellido">
+                                </div>
+                            </div>
+        </div>
+                        
+        <div class="form-group">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="correo">Correo</label>
+                                    <input class="form-control" type="text" placeholder="Ingrese  correo" name="correo" id="correo">
+                                </div>
+                                 <div class="col">
+                                    <label for="telefono">Telefono</label>
+                                    <input class="form-control" type="text" placeholder="Ingrese telefono" name="telefono" id="telefono">
+                                </div>
+                            </div>
+        </div>
            
                  <div class="form-group">
                             <div class="row">
                                 <div class="col">
                                                      
-                            <label for="exampleInputName">Dirección</label>
+                            <label for="exampleInputName">Direccion</label>
                              <input type="text" class="form-control"  placeholder="Ingrese dirección" name="direccion" id="direccion"  >
                                 
                                 </div>
                                 <div class="col">
                                     <label for="departamento">Sucursal:</label>  
-                                    <select class="form-control" name="Sucursal">
-                                        <option value="1">Puerto Barrios</option>
-                                        <option value="2">Morales</option>
-                                        <option value="3">Los Amates</option>
-                                        <option value="4">El Estor</option>
+                                    <select class="form-control" name="sucursal">
+                                        <option value="Puerto Barrios">Puerto Barrios</option>
+                                        <option value="Morales">Morales</option>
+                                        <option value="Los Amates">Los Amates</option>
+                                        <option value="El Estor">El Estor</option>
                                     </select>
                                 </div>
                             </div>
@@ -112,19 +110,19 @@
                         <div class="form-group">
                             <div class="row">
                                 <div class="col">
-                                    <label for="grado">Grado:</label>
-                                    <select class="form-control" name="Grado">
-                                        <option value="1">Novatos</option>
-                                        <option value="2">Expertos</option>
+                                    <label for="grado">Grado</label>
+                                    <select class="form-control" name="grado">
+                                        <option value="Novatos">Novatos</option>
+                                        <option value="Expertos">Expertos</option>
                                     </select>
                                 </div>
                                 <div class="col">
-                                    <label for="nivel">Nivel:</label>  
-                                    <select class="form-control" name="Nivel">
-                                        <option value="1">Principiante I</option>
-                                        <option value="2">Principiante II</option>
-                                        <option value="3">Avanzado I</option>
-                                        <option value="4">Avanzado II</option>
+                                    <label for="nivel">Nivel</label>  
+                                    <select class="form-control" name="nivel">
+                                        <option value="Principiante I">Principiante I</option>
+                                        <option value="Principiante II">Principiante II</option>
+                                        <option value="Avanzado I">Avanzado I</option>
+                                        <option value="Avanzado II">Avanzado II</option>
                                     </select>
                                 </div>
                             </div>
@@ -139,23 +137,30 @@
              <button type="reset" class="btn btn-danger">Cancelar</button>
              <a class="btn btn-warning" href="home.jsp" style="float: right;">Atrás</a>
              
+             
         </div>
         </form>   
         </div>
         
       <div class="p-3 bd-highlight">
             <div class="container" id="container2">
-                <table class="table table-striped table-hover">
+                <table class="table table-striped table-hover bg-white">
                     <thead class="table-dark">
+                       
                         <tr>
-                            <td>Codigo de Estudiante</td>
+                            <td>Codigo</td>
                             <td>Nombre</td>
                             <td>Apellido</td>
                             <td>Dirección</td>
-                            <td>Correo Institucional</td>
+                            <td>Correo</td>
                             <td>Telefono</td>
+                            <td>Sucursal</td>
+                            <td>Grado</td>
+                            <td>Nivel</td>
+                            <td>Fecha</td>
                             <td>Acción</td>
                         </tr>
+                     
                     </thead>
                     <tbody id="bodyTable">
 
