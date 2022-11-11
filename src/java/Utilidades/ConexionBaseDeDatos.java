@@ -9,14 +9,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- *
- * @author JP
- */
+
 public class ConexionBaseDeDatos {
      private String url="jdbc:mysql://127.0.0.1:3306/rapidito";//url de MySQL
     private String usuario="root";// usuario de mysql local
-    private String clave="12345"; 
+    private String clave="Umg$2019"; 
     private Connection conexion=null;  
     
     public Connection conectar(){   

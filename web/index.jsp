@@ -77,7 +77,7 @@
               <input type="password" class="form-control" name="pass" id="exampleInputPassword1" placeholder="Ingrese contraseña">
             </div>
            <br>
-                <input type="submit" class="btn btn-primary "></button>
+                <input type="submit" value="Entrar" class="btn btn-primary "></button>
                 
             
                 
