@@ -113,8 +113,8 @@
                          <td class="text-center"> 
                             
                            
-                            <a class="btn btn-warning btn-sm ">Editar</a>
-                            <a class="btn btn-danger btn-sm ">Eliminar</a>
+                            <a href="EditarCatedratico.jsp?id=<%= rs.getInt("numero_carne")%>" class="btn btn-warning btn-sm ">Editar</a>
+                            <a href="EliminarCatedratico.jsp?id=<%= rs.getInt("numero_carne")%>" class="btn btn-danger btn-sm ">Eliminar</a>
                            
                         </td> 
                     </tr>
