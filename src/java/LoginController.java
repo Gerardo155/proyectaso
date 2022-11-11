@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet(urlPatterns = {"/AlumnoController"})
-public class AlumnoController extends HttpServlet {
+@WebServlet(urlPatterns = {"/LoginController"})
+public class LoginController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,7 +30,7 @@ public class AlumnoController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
            if(request.getSession().getAttribute("user")==null){
-               //response.sendRedirect(request.getContextPath()+"/index.jsp");
+             
                request.setAttribute("success", 0);
                 request.getRequestDispatcher("/index.jsp").forward(request, response);
            }else{

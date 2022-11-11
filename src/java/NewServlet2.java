@@ -57,6 +57,11 @@ public class NewServlet2 extends HttpServlet {
                 request.getParameter("apellido"),        
                 request.getParameter("correo"),
                 request.getParameter("direccion"),
+                request.getParameter("sucursal"),
+                request.getParameter("grado"), 
+                request.getParameter("nivel"), 
+                request.getParameter("fecha"),    
+                       
                 Integer.parseInt(request.getParameter("telefono")));                
                 registroCatedratico.guardarCatedratico2(catedratico);//almacenarlo en BD                 
            }else if(control.toUpperCase().equals("ELIMINAR")){

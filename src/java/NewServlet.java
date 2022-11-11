@@ -44,7 +44,7 @@ public class NewServlet extends HttpServlet {
             if(usuarioConsultado.equals(request.getParameter("user"))){
                request.getSession().setAttribute("user", request.getParameter("user"));
                 request.getSession().setAttribute("pass", request.getParameter("pass"));
-                response.sendRedirect(request.getContextPath()+"/AlumnoController");              
+                response.sendRedirect(request.getContextPath()+"/LoginController");              
             }else{
                 request.setAttribute("success", 0);
                 request.setAttribute("mensaje", "Usuario y/o contraseña incorrecta");

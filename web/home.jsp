@@ -32,9 +32,9 @@
         </style>  
     </head>
     <body>
-       
+        
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="https://www.umg.edu.gt/">
+  <a class="navbar-brand" href="home.jsp">
       <img src="img/image.png" width="30" height="30" class="d-inline-block align-top" alt="">
       RAPIDITO
   </a>
@@ -62,7 +62,7 @@
             </div>
         </li>
       
-       
+   
         
       <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">

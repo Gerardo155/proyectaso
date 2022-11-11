@@ -48,7 +48,7 @@ public class AlumnoController {
             statement = conexion.prepareStatement(sql); 
             statement.setInt(1, alumno.getCodigo());
             statement.setString(2, alumno.getNombre());
-             statement.setString(3, alumno.getApellido());
+            statement.setString(3, alumno.getApellido());
             statement.setString(4, alumno.getCorreo());
             statement.setString(5, alumno.getDireccion());
             statement.setInt(6, alumno.getTelefono());

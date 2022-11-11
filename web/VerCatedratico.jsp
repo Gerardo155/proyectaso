@@ -4,6 +4,10 @@
     Author     : GERARD
 --%>
 
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -36,27 +40,88 @@
     </head>
     <body>
        
+         <%
+            //conectando a base de datos
+            Connection conexion=null;
+            String url="jdbc:mysql://localhost:3306/rapidito";//url de MySQL
+            String usuario="root";// usuario de mysql local
+            String clave="12345"; 
+           
+            
+             Class.forName("com.mysql.jdbc.Driver");
+             conexion=DriverManager.getConnection( url, usuario,clave);
+             
+             //listado de la tabla
+             
+             PreparedStatement ps;
+             ResultSet rs;
+             ps=conexion.prepareStatement("select * from catedratico");
+             rs=ps.executeQuery();
+             
+             //creacion de tabla
+             
+
+            %>
+        
+        
+        
         
        
         
         <div class="p-3 bd-highlight">
              <a class="btn btn-warning" href="home.jsp" style="float: right;">Back</a>
             <div class="container" id="container2">
-                <table class="table table-striped table-hover">
+                <table class="table table-striped table-hover bg-white">
                     <thead class="table-dark">
                         <tr>
-                            <td>Codigo </td>
+                            <td>Codigo</td>
                             <td>Nombre</td>
                             <td>Apellido</td>
                             <td>Dirección</td>
-                            <td>Correo Institucional</td>
+                            <td>Correo</td>
                             <td>Telefono</td>
-                            <td>Acción</td>
+                            <td>Sucursal</td>
+                            <td>Grado</td>
+                            <td>Nivel</td>
+                            <td>Fecha</td>
+                            <td>Acción</td>                                            
                         </tr>
+                        
                     </thead>
                     <tbody id="bodyTable">
 
-                    </tbody>                     
+                    </tbody>   
+                    
+                     <%
+                        
+                        while(rs.next()){
+
+                    %>
+                    
+                    
+                    <tr>
+                        <td><%= rs.getInt("numero_carne") %></td>
+                        <td><%= rs.getString("nombre_catedratico") %></td>
+                        <td><%= rs.getString("apellido_catedratico") %></td>
+                        <td><%= rs.getString("correo_catedratico") %></td>
+                        <td><%= rs.getString("direccion_catedratico") %></td>
+                        <td><%= rs.getString("telefono_catedratico") %></td>
+                        <td><%= rs.getString("sucursal_catedratico") %></td>
+                        <td><%= rs.getString("grado_catedratico") %></td>
+                        <td><%= rs.getString("nivel_catedratico") %></td>
+                        <td><%= rs.getString("fecha_catedratico") %></td>
+                         <td class="text-center"> 
+                            
+                           
+                            <a class="btn btn-warning btn-sm ">Editar</a>
+                            <a class="btn btn-danger btn-sm ">Eliminar</a>
+                           
+                        </td> 
+                    </tr>
+                    <% } %>
+                    
+                    
+                    
                 </table>
             </div>
         </div>

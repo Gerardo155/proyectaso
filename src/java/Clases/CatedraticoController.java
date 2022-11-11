@@ -46,8 +46,8 @@ public class CatedraticoController {
    
     
     public String guardarCatedratico2(Catedratico catedratico){        
-        String sql = "INSERT INTO rapidito.catedratico(numero_carne, nombre_catedratico, apellido_catedratico, correo_catedratico, direccion_catedratico, telefono_catedratico) ";
-             sql += " VALUES(?,?,?,?,?,?)";              
+        String sql = "INSERT INTO rapidito.catedratico(numero_carne, nombre_catedratico, apellido_catedratico, correo_catedratico, direccion_catedratico, telefono_catedratico, sucursal_catedratico, grado_catedratico, nivel_catedratico, fecha_catedratico) ";
+             sql += " VALUES(?,?,?,?,?,?,?,?,?,?)";              
        try{     
             abrirConexion();
             statement = conexion.prepareStatement(sql); 
@@ -57,6 +57,12 @@ public class CatedraticoController {
             statement.setString(4, catedratico.getCorreo());
             statement.setString(5, catedratico.getDireccion());
             statement.setInt(6, catedratico.getTelefono());
+            statement.setString(7, catedratico.getSucursal());
+            statement.setString(8, catedratico.getGrado());
+            statement.setString(9, catedratico.getNivel());
+            statement.setString(10, catedratico.getFecha());
+            
+            
                 int resultado = statement.executeUpdate(); 
                 if(resultado > 0){
                     return String.valueOf(resultado);
@@ -84,9 +90,12 @@ public class CatedraticoController {
                 respuesta.append("<td >").append(result.getString("direccion_catedratico")).append("</td>");
                 respuesta.append("<td >").append(result.getString("correo_catedratico")).append("</td>");
                 respuesta.append("<td >").append(result.getString("telefono_catedratico")).append("</td>");
+                respuesta.append("<td >").append(result.getString("sucursal_catedratico")).append("</td>");
+                respuesta.append("<td >").append(result.getString("grado_catedratico")).append("</td>");
+                respuesta.append("<td >").append(result.getString("nivel_catedratico")).append("</td>");
+                respuesta.append("<td >").append(result.getString("fecha_catedratico")).append("</td>");
                 respuesta.append("<td id=\"").append(result.getString("numero_carne"))
                         .append("\"  onclick=\"eliminarCatedratico(this.id);\">") 
-                         //.append("\"  onclick=\"eliminarAlumno("+result.getString("numero_carne")+");\">") 
                         .append(" <a class=\"btn btn-warning\"'><i class=\"fas fa-edit\"></i>  </a>"
                                 +" <a class=\"btn btn-danger\"'> <i class=\"fas fa-trash-alt\"></i> </a>"
                                 + " <td></tr>");
